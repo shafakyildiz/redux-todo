@@ -7,3 +7,11 @@
   height: 40px;
   border-radius: 12px;
 }
+
+.todoItem > p {
+  flex: 1;
+}
+
+.todoItem--done {
+  text-decoration: line-through;
+}
