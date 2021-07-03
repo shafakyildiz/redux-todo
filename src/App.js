@@ -4,7 +4,7 @@ import Input from './components/Input.js';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='app'>
       <Input></Input>
       {/* todo list */}
       {/* done */}

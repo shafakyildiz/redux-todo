@@ -12,7 +12,7 @@ function Input() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button onClick={addTodo}>Add Todo</button>
+      <button onClick={addTodo}>Add</button>
     </div>
   );
 }
