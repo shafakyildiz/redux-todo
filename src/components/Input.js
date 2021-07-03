@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Input.css';
+import Button from '@material-ui/core/Button';
 
 import { useDispatch } from 'react-redux';
 import { saveTodo } from '../features/todoSlice';
@@ -8,7 +9,6 @@ function Input() {
   const dispatch = useDispatch();
   const addTodo = () => {
     console.log(`Adding ${input}`);
-
     dispatch(
       saveTodo({
         item: input,
@@ -24,7 +24,9 @@ function Input() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button onClick={addTodo}>Add</button>
+      <Button onClick={addTodo} variant='contained' color='primary'>
+        ADD
+      </Button>
     </div>
   );
 }

@@ -1,9 +1,15 @@
 import React from 'react';
 import './TodoItem.css';
 import Checkbox from '@material-ui/core/Checkbox';
+import { useDispatch } from 'react-redux';
+import { setCheck } from '../features/todoSlice';
 
 const TodoItem = ({ name, done, id }) => {
-  const handleChange = () => {};
+  const dispatch = useDispatch();
+  const handleChange = () => {
+    console.log(done);
+    dispatch(setCheck(id));
+  };
   return (
     <div className='todoItem'>
       <Checkbox
@@ -12,8 +18,6 @@ const TodoItem = ({ name, done, id }) => {
         onChange={handleChange}
         inputProps={{ 'aria-label': 'primary checkbox' }}
       />
-      {/* checkbox */}
-      {/* name */}
       <p className={done && 'todoItem--done'}>{name}</p>
     </div>
   );
