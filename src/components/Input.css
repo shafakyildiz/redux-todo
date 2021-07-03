@@ -4,6 +4,7 @@
   border-radius: 12px;
   background-color: white;
   display: flex;
+  align-items: center;
 }
 
 input {
@@ -24,4 +25,7 @@ button {
   border-radius: 10px;
   height: 30px;
   width: 50px;
+  display: flex;
+
+  align-items: center;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Input.css';
 
 import { useDispatch } from 'react-redux';
-import saveTodo from '../features/todoSlice.js';
+import { saveTodo } from '../features/todoSlice';
 function Input() {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
