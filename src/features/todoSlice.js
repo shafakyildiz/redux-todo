@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// let url = 'https://jsonplaceholder.typicode.com/todos/1';
+
 const initialState = {
   todoList: [],
 };
@@ -9,10 +11,10 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     saveTodo: (state, action) => {
-      state.todoList.push(action.payload);
+      state.todoList = [...state.todoList, action.payload];
     },
     setCheck: (state, action) => {
-      state.todoList.map((item) => {
+      state.todoList.forEach((item) => {
         if (action.payload === item.id) {
           if (item.done) {
             item.done = false;

@@ -1,10 +1,11 @@
 .input {
   height: 50px;
   width: 80%;
-  border-radius: 12px;
   background-color: white;
   display: flex;
+  border-radius: 12px;
   align-items: center;
+  overflow: hidden;
 }
 
 input {
@@ -22,10 +23,9 @@ button {
   margin-right: 8px;
   background-color: rgb(214, 213, 213);
   border: none;
-  border-radius: 10px;
-  height: 30px;
   width: 50px;
   display: flex;
-
   align-items: center;
+  height: 100%;
+  border-radius: 0px !important;
 }

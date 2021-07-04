@@ -18,7 +18,7 @@ const TodoItem = ({ name, done, id }) => {
         onChange={handleChange}
         inputProps={{ 'aria-label': 'primary checkbox' }}
       />
-      <p className={done && 'todoItem--done'}>{name}</p>
+      <p className={`${done ? 'todoItem--done' : ''}`}>{name}</p>
     </div>
   );
 };
